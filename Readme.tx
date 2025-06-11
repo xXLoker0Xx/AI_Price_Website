@@ -1,0 +1,19 @@
+python -m venv venv
+.\venv\Scripts\Activate.ps1
+
+# backend
+pip install fastapi uvicorn
+pip install python-dotenv
+pip install numpy pandas scikit-learn
+pip freeze > requirements.txt
+
+# frontend
+npx create-next-app@latest frontend
+
+√ Would you like to use TypeScript? ... No / Yes
+√ Would you like to use ESLint? ... No / Yes
+√ Would you like to use Tailwind CSS? ... No / Yes
+√ Would you like your code inside a `src/` directory? ... No / Yes
+√ Would you like to use App Router? (recommended) ... No / Yes
+√ Would you like to use Turbopack for `next dev`? ... No / Yes
+√ Would you like to customize the import alias (`@/*` by default)? ... No / Yes
