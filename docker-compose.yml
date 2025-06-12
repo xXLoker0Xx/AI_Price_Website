@@ -1,14 +1,23 @@
-version: '3.8'
+version: "3.9"
 
 services:
+  backend:
+    build: ./backend
+    container_name: backend-ai
+    ports:
+      - "8000:8000"
+    networks:
+      - ai_net
+
   frontend:
     build: ./frontend
+    container_name: frontend-ai
     ports:
       - "3000:3000"
+    networks:
+      - ai_net
     depends_on:
       - backend
 
-  backend:
-    build: ./backend
-    ports:
-      - "8000:8000"
+networks:
+  ai_net:
